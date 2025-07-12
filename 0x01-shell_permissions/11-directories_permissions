@@ -1,6 +1,4 @@
 #!/bin/bash
 # This script gives execute permission to all subdirectories (only directories)
 
-for dir in */; do
- [ -d "$dir" ] && chmod a+x "$dir"
-done
+find . -type d -exec chmod a+x {} \+
